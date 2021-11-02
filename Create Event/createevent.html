@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../indexstyle.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="headerLink" onclick="home()">UniFriend</h1>
+        <h3 class="logOut" onclick="logout()">Log out</h3>
+    </div>
+    <form class="eventForm">
+        <h2>Create Event</h2>
+        
+        <label>Event Name:</label>
+            <input class="createInput" id="eventName" name="firstName" type="text"/>
+        <label>Date and Time:</label>
+            <input class="createInput" id="eventDT" type="datetime-local"/>
+        <label>Location:</label>
+            <a href="https://www.google.hu/maps/" class="createInput" target="_blank"><img src="GeoLocation.jpg" width="40px" height="50px"></a>
+        <label>Activity:</label>
+            <select class="createInput" id="eventActivity" name="eventActivity">
+                <option value="Select Activity" selected>Select Activity</option>
+                <option value="Football">Football</option>
+                <option value="Basketball">Basketball</option>
+                <option value="Gaming" >Gaming</option>
+                <option value="Chess">Chess</option>
+                <option value="Baseball">Baseball</option>
+                <option value="Running">Running</option>
+                <option value="Hiking">Hiking</option>
+                <option value="Cycling">Cycling</option>
+            </select>
+
+        <label for="eventImage">
+            Image:
+        </label>
+        <label for="eventImage">
+            <img src="imageadd.png" width="80px" height="80px">
+        </label>
+        <input class="createInput" id="eventImage" hidden type="file"/>
+
+
+    </form>
+    
+    <div id="loaderState">
+
+    </div>
+
+    <button class="button" id="createButton" onclick="createActivity()">Create</button>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="footer">
+        <a class="backButton" href="../Main/main.html">
+            <img width="40px" src="../backArrow.png">
+        </a>
+        <a class="homeButton" href="../Main/main.html">
+            <img width="40px" src="../homeIcon.png">
+        </a>
+        <a class="thirdButton" href="../Settings/settings.html">
+            <img width="40px" src="../settingsbutton.png">
+        </a>
+    </div>
+</body>
+<script>
+    function createActivity() {
+        var loaderDiv = document.getElementById("loaderState");
+        var loader = document.createElement("div");
+        loader.className = "loader";
+
+        loaderDiv.appendChild(loader)
+
+
+        setTimeout(function() {
+            alert(
+                "created event with:" + 
+                "\neventName: " + document.getElementById("eventName").value + 
+                "\neventDT: " + document.getElementById("eventDT").value +
+                "\neventActivity: " + document.getElementById("eventActivity").value +
+                "\neventImage: " + document.getElementById("eventImage").value
+            );
+            console.log("created event with values:");
+            console.log(document.getElementById("eventName").value);
+            console.log(document.getElementById("eventDT").value);
+            console.log(document.getElementById("eventActivity").value);
+            console.log(document.getElementById("eventImage").value);
+            location.href = "../Main/main.html";
+        }, 3000);
+
+
+    };
+
+    function home(){
+        location.href = "../index.html"
+    };
+
+    function logout(){
+            location.href = "../index.html"
+    };
+</script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../indexstyle.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="headerLink" onclick="home()">UniFriend</h1>
+    </div>
+
+    <h1>Please log in</h1>
+    <form class="loginForm">
+        <label>Email:</label>
+        <input class="regInput" name="email" type="email"/>
+        <label>Password:</label>
+        <input class="regInput" name="password" type="password"/>  
+    </form>
+    
+    <div id="loaderState">
+
+    </div>
+
+    <div class="menyButtons">
+        <button class="button" onclick="login()">Log in</button>
+        <a href="./Forgot password/forgotpass.html">
+            <button class="button">Forgot password</button>
+        </a>
+
+    </div>
+    <div class="footer">
+        <a class="backButton" href="../index.html">
+            <img width="40px" src="../backArrow.png">
+        </a>
+        <a class="homeButton" href="../index.html">
+            <img width="40px" src="../homeIcon.png">
+        </a>
+    </div>
+
+</body>
+<script>
+    function login() {
+        var loaderDiv = document.getElementById("loaderState");
+        var loader = document.createElement("div");
+        loader.className = "loader";
+
+        loaderDiv.appendChild(loader)
+
+
+        setTimeout(function() {
+            location.href = "../Main/main.html";
+        }, 1000);
+
+    }
+    function home(){
+        location.href = "../index.html"
+    }
+</script>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../indexstyle.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="headerLink" onclick="home()">UniFriend</h1>
+        <h3 class="logOut" onclick="logout()">Log out</h3>
+    </div>
+    <h2>Friends</h2>
+    <div>
+        <input name="searchBar" class="searchBar" placeholder="Search friends"/>
+        <button class="friendButton">Search</button>
+    </div>
+
+    <div id="friendList" class="friendList">
+
+    </div>
+
+
+    <div class="footer">
+        <a class="backButton" href="../Main/main.html">
+            <img width="40px" src="../backArrow.png">
+        </a>
+        <a class="homeButton" href="../index.html">
+            <img width="40px" src="../homeIcon.png">
+        </a>
+        <a class="thirdButton" href="../Settings/settings.html">
+            <img width="40px" src="../settingsbutton.png">
+        </a>
+    </div>
+</body>
+<script>
+    const friends = ["Derren Faust", "Billy B.", "Filip", "Beatrice", "Julia", "Marcus"];
+    const friendsHtml = document.getElementById("friendList");
+
+    function viewFriends() {
+        friends.map((friend) => {
+            var divTag = document.createElement("div");
+            divTag.className = "friend";
+
+            var text = document.createTextNode(friend);
+            text.className = "friendText";
+            
+            var button = document.createElement("button");
+            button.className = "friendButton";
+            button.textContent = "Chat";
+            button.onclick = () => {
+                console.log("opened chat with " + friend);
+                window.location.href = "./chat.html";
+            }
+
+            divTag.appendChild(text);
+            divTag.appendChild(button);
+            friendsHtml.appendChild(divTag);
+        });
+    }
+
+    function home() {
+            location.href = "../Main/main.html"
+        };
+    function logout(){
+        location.href = "../index.html"
+    };
+    viewFriends()
+
+</script>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../indexstyle.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="headerLink" onclick="home()">UniFriend</h1>
+        <h3 class="logOut" onclick="logout()">Log out</h3>
+    </div>
+    
+    <h1>Choose filters</h1>
+    <p>Filter by interests:</p>
+    <select>
+        <option>None</option>
+        <option>Football</option>
+        <option>Basketball</option>
+        <option selected>Gaming</option>
+        <option>Chess</option>
+        <option>Baseball</option>
+        <option>Running</option>
+        <option>Hiking</option>
+        <option>Cycling</option>
+        </select>
+    <br>
+    <p>Filter by study:</p>
+    <select>
+        <option>None</option>
+        <option selected>Bachelor in Informationsystems</option>
+        <option>Bachelor in Business</option>
+        <option>Master in Cybersecurity</option>
+    </select>
+    <div class="container">
+        <a href="../findfriends.html">
+            <button class="button">Back</button>
+        </a>    
+        <a href="">
+            <button onclick="savechanges()" class="button">Save</button>
+        </a>
+    </div>
+    
+    <div class="footer">
+        <a class="backButton" href="../findfriends.html">
+            <img width="40px" src="../../backArrow.png">
+        </a>
+        <a class="homeButton" href="../../index.html">
+            <img width="40px" src="../../homeIcon.png">
+        </a>
+        <a class="thirdButton" href="../../Settings/settings.html">
+            <img width="40px" src="../../settingsbutton.png">
+        </a>
+    </div>
+
+    <script>
+
+        function savechanges() {
+            alert("Saved changes!");
+        };
+
+        function home() {
+            location.href = "../../Main/main.html"
+        };
+
+        function logout(){
+            location.href = "../../index.html"
+        };
+    </script>
+
+</body>
+</html>

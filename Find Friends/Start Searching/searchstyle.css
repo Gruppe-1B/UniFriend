@@ -1,0 +1,74 @@
+body {
+    background-color:steelblue;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#olanpic {
+    width: 250px;
+    height: 250px;
+}
+
+.container {
+    width: auto;
+}
+
+.container p {
+    display: inline-block;
+    margin-left: 35px;
+}
+
+#addfriendbutton {
+    cursor: pointer;
+    border-radius: 100%;
+    background-color: lightskyblue;
+}
+
+#nextandhomebutton {
+    cursor: pointer;
+    border-radius: 100;
+    border: none;
+    background-color: steelblue;
+}
+
+#images {
+    width: 75px;
+    height: 75px;
+}
+
+.button {
+    background-color: midnightblue;
+    border-radius: 25px;
+    padding: 25px 125px;
+    margin: 15px auto;
+    color: white;
+}
+
+.button:hover {
+    background-color: mediumslateblue;
+    color: black;
+    cursor: pointer;
+}
+
+a {
+    margin: 0 auto;
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    width: auto;
+}
+
+.container button {
+    display: inline-block;
+    vertical-align: top;
+}

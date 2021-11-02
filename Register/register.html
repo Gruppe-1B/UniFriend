@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../indexstyle.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="headerLink" onclick="home()">UniFriend</h1>
+    </div>
+    <h2>Register</h2>
+    <form class="registerForm">
+        
+        <label>First Name:</label>
+            <input class="regInput" id="firstName" name="firstName" type="text"/>
+        <label>Last Name:</label>
+            <input class="regInput" id="lastName" name="lastName" type="text"/>
+        <label>Email:</label>
+            <input class="regInput" id="email" name="email" type="email"/>
+        <label>Password:</label>
+            <input class="regInput" name="password" type="password"/>
+        <label> Confirm Password:</label>
+
+        <input class="regInput" name="repeatPass" type="password"/>
+        
+    </form>
+
+    <div id="loaderState">
+
+    </div>
+
+    <button class="button" id="registerButton" onclick="registerUser()" >Register</button>
+
+    <div class="footer">
+        <a class="backButton" href="../index.html">
+            <img width="40px" src="../backArrow.png">
+        </a>
+        <a class="homeButton" href="../index.html">
+            <img width="40px" src="../homeIcon.png">
+    </div>
+
+    
+
+</body>
+<script>
+    var loading = true
+    function registerUser() {
+        var firstName = document.getElementById("firstName").value;
+        var lastName = document.getElementById("lastName").value;
+        var email = document.getElementById("email").value;
+        console.log("registered user", firstName, lastName, email);
+
+        var loaderDiv = document.getElementById("loaderState");
+        var loader = document.createElement("div");
+        loader.className = "loader";
+
+        loaderDiv.appendChild(loader)
+
+
+        setTimeout(function() {
+            alert("User was registered!");
+            location.href = "registerconfirm.html";
+        }, 2000);
+
+    }
+
+
+    function home(){
+        location.href = "../index.html"
+    };
+    
+</script>
+</html>

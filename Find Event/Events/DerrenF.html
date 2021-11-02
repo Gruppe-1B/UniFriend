@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../indexstyle.css">
+</head>
+
+<body>
+
+    
+    <div id="eventActivity" class="activity">
+        <div>
+            <h2>Dungeons & Dragons</h2>
+        </div>
+            <div>
+                <img width="260px" src="DungeonsAndDragons.jpg">
+            </div>
+
+            <div>
+                <p>
+                    Marviksveien
+                </p>
+                <img width="20px" height="20px" src="GeoLocation.jpg">
+            </div>
+
+        <div>
+            <h3>Started by: Derren Faust</h3>
+            <p>Monday <br> 08:00-12:00</p>
+        </div>
+
+        <div>
+            <p>
+                About <br>
+                Looking for game master or players
+            </p>
+            <div>
+                <p>
+                    People attending: 4
+                </p>
+                <button class="friendButton" onclick="join()">Join Event</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <a class="backButton" href="../findevent.html">
+            <img width="40px" src="../../backArrow.png">
+        </a>
+        <a class="homeButton" href="../../Main/main.html">
+            <img width="40px" src="../../homeIcon.png">
+        </a>
+        <a class="thirdButton" href="../../Settings/settings.html">
+            <img width="40px" src="../../settingsbutton.png">
+        </a>
+    </div>
+
+</body>
+<script>
+
+
+    function join() {
+        alert("Joined event!");
+        location.href = "../findevent.html";
+    }
+    
+</script>
+</html>

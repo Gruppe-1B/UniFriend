@@ -1,0 +1,476 @@
+:root{
+    --BaColor : steelblue;
+    --BuColor : #16284C;
+    --BuHoColor : white;
+    --HeaderColor : #16284C;
+    --FooterColor : #16284C;
+}
+
+
+
+/** MAIN COMPONENTS **/
+body {
+    background-color: var(--BaColor);
+    margin: 0px auto;
+    text-align: center;
+}
+
+.button {
+    background-color: var(--BuColor);
+    border-radius: 25px;
+    padding: 25px 125px;
+    margin: 20px auto;
+    color: white;
+    min-width: 320px;
+}
+
+.button:hover {
+    background-color: var(--BuHoColor);
+    color: black;
+    cursor: pointer;
+}
+
+.smallbutton {
+    background-color: var(--BuColor);
+    border-radius: 25px;
+    padding: 15px 65px;
+    margin: 20px auto;
+    color: white;
+}
+
+.smallbutton:hover {
+    background-color: var(--BuHoColor);
+    color: black;
+    cursor: pointer;
+}
+
+a {
+    margin: 0 auto;
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    background-color: var(--HeaderColor);
+    color: white;
+}
+
+.headerLink:active {
+    box-shadow: 0 0 5px black;
+}
+
+.footer{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    background-color: var(--FooterColor);
+    color: white;
+}
+
+.backButton {
+    padding: 5px;
+
+}
+
+.homeButton {
+    padding: 5px;
+}
+
+.logOut {
+    padding: 5px;
+    margin-left: 25px;
+}
+
+.thirdButton {
+    padding: 5px;
+}
+
+/*
+    Copied from https://www.w3schools.com/howto/howto_css_loader.asp 
+    as recreating this would be unnecessarily timeconsuming
+ */
+.loader {
+    margin: 5px auto;
+    border: 8px solid white;
+    border-top: 8px solid var(--BuColor);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+
+/** REGISTER **/
+.registerForm {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2, 1fr;
+    max-width: 400px;
+    margin: auto;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.regInput {
+    margin: 10px auto;
+    padding: 5px;
+    border-radius: 5px;
+    border-width: 3px;
+}
+
+.registerButton {
+    background-color: var(--BuColor);
+    border-radius: 10px;
+    padding: 10px 10px;
+    color: white;
+    margin: 10px auto;
+}
+
+.registerButton:hover {
+    background-color: var(--BuHoColor);
+    color: black;
+}
+
+
+
+/** MAIN **/
+.menyButtons {
+    display: grid;
+}
+
+
+
+/** LOGIN **/
+.menyButtons {
+    display: grid;
+}
+
+.loginForm {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2, 1fr;
+    max-width: 400px;
+    margin: 0px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+
+/** FRIENDS **/
+.searchBar {
+    padding: 10px;
+    margin: 15px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+}
+
+.friend {
+    display: grid;
+    background-color: var(--BuHoColor);
+    border-color: black;
+    border-style: solid;
+    border-radius: 20px;
+    max-width: 400px;
+    margin: 10px auto;
+}
+
+.friendText {
+    margin: 10px;
+}
+
+.friendButton {
+    background-color: var(--BuColor);
+    border-radius: 15px;
+    padding: 10px 20px;
+    margin: 5px auto;
+    color: white;
+}
+
+.friendButton:hover {
+    background-color: var(--BuHoColor);
+    color: black;
+    cursor: pointer;
+}
+
+
+
+/** CHAT **/
+.chatName {
+    display: flex;
+    text-align: start;
+}
+
+.profileImage {
+    border-radius: 50%;
+    margin: 0px 10px;
+}
+
+.chat {
+    background-color: white;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.message {
+    background-color: lightskyblue ;
+    padding: 5px 10px;
+    border-radius: 10px;
+    align-self: start;
+}
+
+.reply {
+    background-color: rgb(100, 144, 172) ;
+    padding: 5px 10px;
+    border-radius: 10px;
+    align-self: end;
+}
+
+.messageForm {
+    display: flex;
+    flex-direction: row;
+}
+
+.messageInput {
+    display: flex;
+    max-width: 70%;
+    margin: 10px 0px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.messageButton {
+    background-color: var(--BuColor);
+    margin: 10px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: white;
+}
+
+
+
+/** SEARCH **/
+#profilePic {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+#addfriendbutton {
+    cursor: pointer;
+    border-radius: 100%;
+    border-style: solid;
+    border-color: black;
+    background-color: var(--BaColor);
+}
+
+#nextandhomebutton {
+    cursor: pointer;
+    border-radius: 100;
+    border: none;
+    background-color: var(--BaColor);
+}
+
+#images {
+    max-width: 75px;
+    max-height: 75px;
+}
+
+
+
+/** FIND FRIENDS **/
+
+
+
+
+/** EDIT PROFILE **/
+#textinput {
+    max-width: 350px;
+    max-height: 150px;
+    min-height: 60px;
+    border-radius: 10px;
+}
+
+.uploadpic > input {
+    display: none;
+}
+
+.file-input {
+    max-width:80px;
+    max-height: 80px;
+    cursor: pointer;
+}
+
+.interestList {
+    display: grid;
+}
+
+.interest {
+    background-color: white;
+    padding: 2px;
+    margin: 1px auto;
+    border-radius: 5px;
+    width: min-content;
+}
+
+
+
+/** FRIEND REQUESTS **/
+.request {
+    display: grid;
+    background-color: rgb(102, 169, 245);
+    border-color: black;
+    border-style: solid;
+    border-radius: 20px;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 10px 0px;
+}
+
+.requestButton {
+    background-color: var(--BuColor);
+    border-radius: 15px;
+    padding: 10px 30px;
+    margin: 5px auto;
+    color: white;
+}
+
+.requestButton:hover {
+    background-color: var(--BuHoColor);
+    color: black;
+    cursor: pointer;
+}
+
+
+
+/** NEW FRIEND REQUEST **/
+.requestPicture {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.friendRequestButton {
+    background-color: var(--BuColor);
+    border-radius: 15px;
+    padding: 10px 20px;
+    margin: 5px;
+    color: white
+}
+
+.friendRequestButton:hover {
+    background-color: var(--BuHoColor);
+    color: black;
+    cursor: pointer;
+}
+
+
+
+/** FILTER **/
+.container a {
+    margin: 10px;
+    display: inline-block;
+}
+
+
+
+/** CREATE EVENT **/
+.eventForm {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2, 1fr;
+    max-width: 400px;
+    margin: 0px auto 0px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.createInput {
+    margin: 10px auto;
+    padding: 5px;
+    border-radius: 5px;
+    border-width: 3px;
+}
+
+.createButton {
+    background-color: var(--BuColor);
+    border-radius: 10px;
+    padding: 10px 10px;
+    color: white;
+    margin: 10px auto;
+}
+
+.createButton:hover {
+    background-color: var(--BuHoColor);
+    color: black;
+}
+
+
+
+/** FIND EVENT **/
+.event {
+    display: flex;
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    border-radius: 20px;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: large;
+}
+
+.joinButton {
+    background-color: var(--BuColor);
+    border-radius: 20px;
+    padding: 25px 40px;
+    color: white;
+    margin: 10px auto;
+}
+
+.joinButton:hover {
+    background-color: var(--BuHoColor);
+    color: black;
+    cursor: pointer;
+}
+
+.activity {
+    display: grid;
+}

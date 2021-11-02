@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../indexstyle.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="headerLink" onclick="home()">UniFriend</h1>
+        <h3 class="logOut" onclick="logout()">Log out</h3>
+    </div>
+    <div class="menyButtons">
+        <a href="./Edit Profile/editprofile.html">
+            <button class="button">Edit Profile</button>
+        </a>
+        <a href="./Friend Requests/friendrequest.html">
+            <button class="button">Friend Requests</button>
+        </a>
+        <a href="./Set Filters/filter.html">
+            <button class="button">Set Filters</button>
+        </a>
+        <a href="./Start Searching/search.html">
+            <button class="button">Start Searching</button>
+        </a>
+
+    </div>
+    <div class="footer">
+        <a class="backButton" href="../Main/main.html">
+            <img width="40px" src="../backArrow.png">
+        </a>
+        <a class="homeButton" href="../index.html">
+            <img width="40px" src="../homeIcon.png">
+        </a>
+        <a class="thirdButton" href="../Settings/settings.html">
+            <img width="40px" src="../settingsbutton.png">
+        </a>
+    </div>
+</body>
+
+<script>
+    function home(){
+        location.href = "../index.html"
+    }
+    function logout(){
+        location.href = "../index.html"
+    };
+</script>
+</html>

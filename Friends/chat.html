@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../indexstyle.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="headerLink" onclick="home()">UniFriend</h1>
+        <h3 class="logOut" onclick="logout()">Log out</h3>
+    </div>
+    <div class="chat">
+        <div  class="chatName">
+            <img width="60px" height="60px" class="profileImage" src="../Find Friends/Friend Requests/derrenfaust.jpg">
+            <h2 id="chatName">
+
+            </h2>
+        </div>
+    
+        <div id="messages" class="messages">
+    
+        </div>
+        <div class="messageForm">
+            <input id="messageInput" class="messageInput">
+            <button class="messageButton" onclick="addMessage(document.getElementById('messageInput').value)">Send</button>
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+        <a class="backButton" href="./friends.html">
+            <img width="40px" src="../backArrow.png">
+        </a>
+        <a class="homeButton" href="../index.html">
+            <img width="40px" src="../homeIcon.png">
+        </a>
+        <a class="thirdButton" href="../Settings/settings.html">
+            <img width="40px" src="../settingsbutton.png">
+        </a>
+    </div>
+</body>
+<script>
+
+    const friend = {
+        "name" : "Derren Faust",
+        "messages" : ["Hei!", "Skal vi finne på noe?"]
+    };
+    const name = window.location.href
+    const messages = document.getElementById("messages");
+
+    const chatHeader = document.getElementById("chatName");
+    chatHeader.textContent = friend.name
+
+    function viewMessages() {
+        friend.messages.map((message) => {
+            var divTag = document.createElement("div");
+            divTag.className = "message";
+
+            var text = document.createTextNode(message);
+            
+            divTag.appendChild(text);
+            messages.appendChild(divTag);
+        });
+    }
+    viewMessages()
+
+    function addMessage(message) {
+        var divTag = document.createElement("div");
+        divTag.className = "reply";
+
+        var text = document.createTextNode(message);
+
+        divTag.appendChild(text);
+        messages.appendChild(divTag);
+        document.getElementById("messageInput").value = "";
+
+    }
+
+    function home() {
+            location.href = "../Main/main.html"
+        };
+    function logout(){
+        location.href = "../index.html"
+    };
+</script>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../indexstyle.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="headerLink" onclick="home()">UniFriend</h1>
+        <h3 class="logOut" onclick="logout()">Log out</h3>
+    </div>
+    <h2>
+        Friend Requests
+    </h2>
+    <div id="requestList" class="requestList">
+
+    </div>
+    
+    <div class="footer">
+        <a class="backButton" href="../findfriends.html">
+            <img width="40px" src="../../backArrow.png">
+        </a>
+        <a class="homeButton" href="../../index.html">
+            <img width="40px" src="../../homeIcon.png">
+        </a>
+        <a class="thirdButton" href="../../Settings/settings.html">
+            <img width="40px" src="../../settingsbutton.png">
+        </a>
+    </div>
+</body>
+<script>
+    const friendrequest = ["Derren Faust", "Billy B.", "Filip", "Beatrice", "Julia", "Marcus"];
+    const requestHtml = document.getElementById("requestList");
+
+    function viewRequests() {
+        friendrequest.map((request) => {
+            var divTag = document.createElement("div");
+            divTag.className = "request";
+
+            var text = document.createTextNode("Friend request from: " + request);
+            
+            var button = document.createElement("button");
+            button.className = "requestButton";
+            button.textContent = "View"
+            button.onclick = () => {
+                console.log("Viewed " + request);
+                window.location.href = "./newfriendreq.html";
+            }
+            divTag.appendChild(text);
+            divTag.appendChild(button)
+            requestHtml.appendChild(divTag);
+        });
+    }
+
+    function home() {
+            location.href = "../../Main/main.html"
+    };
+
+    function logout(){
+            location.href = "../../index.html"
+    };
+
+    viewRequests()
+
+</script>
+</html>

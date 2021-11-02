@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../indexstyle.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="headerLink" onclick="home()">UniFriend</h1>
+        <h3 class="logOut" onclick="logout()">Log out</h3>
+    </div>
+
+    <div>
+        <input name="searchBar" class="searchBar" placeholder="Search events"/>
+        <button class="friendButton">Search</button>
+    </div>
+    <div id="eventList" class="eventList">
+        
+    </div>
+
+    <div class="footer">
+        <a class="backButton" href="../Main/main.html">
+            <img width="40px" src="../backArrow.png">
+        </a>
+        <a class="homeButton" href="../Main/main.html">
+            <img width="40px" src="../homeIcon.png">
+        </a>
+        <a class="thirdButton" href="../Settings/settings.html">
+            <img width="40px" src="../settingsbutton.png">
+        </a>
+    </div>
+
+</body>
+<script>
+    eventDiv = document.getElementById("eventList");
+
+    const eventList = {
+        "Derren F." : {
+            "eventOwner" : "Derren F.",
+            "eventDT" :  "event Date Time",
+            "eventLocation" : "Marviksveien",
+            "eventActivity" : "D&D",
+            "eventParticipants" : 4,
+            "viewLink" : "./Events/DerrenF.html"
+        },
+        "Billy B." : {
+            "eventDT" :  "event Date Time",
+            "eventLocation" : "Odderøya",
+            "eventActivity" : "Football",
+            "eventParticipants" : 7,
+            "viewLink" : "./Events/BillyB.html"
+        },
+        "Filip" : {
+            "eventDT" :  "event Date Time",
+            "eventLocation" : "University of Agder",
+            "eventActivity" : "Football",
+            "eventParticipants" : 12,
+            "viewLink" : "./Events/Filip.html"
+        },
+        "Beatrice" : {
+            "eventDT" :  "event Date Time",
+            "eventLocation" : "Kristiansand S",
+            "eventActivity" : "Outdoor Cinema",
+            "eventParticipants" : 23,
+            "viewLink" : "./Events/Beatrice.html"
+        },
+    };
+
+    function viewActivities() {
+        for (const EventName in eventList) {
+            var currentEvent = document.createElement("div");
+            var currentEventInfo = document.createElement("div");
+
+            currentEvent.className = "event";
+            currentEvent.addEventListener('click', function() {
+                location.href = eventList[EventName].viewLink;
+            }, false);
+
+            var eventName = document.createTextNode(EventName)
+            eventName.fontsize = "40px";
+            var eventLocation = document.createElement("div")
+            eventLocation.appendChild(document.createTextNode("Location: " + eventList[EventName].eventLocation));
+            var eventLocationImg = document.createElement("img");
+            eventLocationImg.src = "GeoLocation.jpg";
+            eventLocationImg.style.width = "20px"
+
+            var eventActivity = document.createElement("div")
+            eventActivity.appendChild(document.createTextNode("Activity: " + eventList[EventName].eventActivity));
+
+
+            var joinButton = document.createElement("button");
+            joinButton.textContent = "Join";
+            joinButton.className = "joinButton";
+
+            currentEventInfo.appendChild(eventName);
+            currentEventInfo.appendChild(eventLocation);
+            currentEventInfo.appendChild(eventLocationImg)
+            currentEventInfo.appendChild(eventActivity);
+
+            currentEvent.appendChild(currentEventInfo);
+            currentEvent.appendChild(joinButton);
+
+            eventDiv.appendChild(currentEvent);
+        }
+    };
+
+    function home(){
+        location.href = "../index.html"
+    };
+
+    function logout(){
+            location.href = "../index.html"
+    };
+    viewActivities();
+</script>
+</html>
